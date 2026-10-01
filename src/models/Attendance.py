@@ -13,6 +13,10 @@ class Attendance(Base):
         nullable=False
     )
 
+    class_id: Mapped[int] = mapped_column(
+        ForeignKey("classes.id"),
+    )
+
     date: Mapped[date] = mapped_column(
         Date,
         nullable=False

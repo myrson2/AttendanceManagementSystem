@@ -10,7 +10,6 @@ from src.repository.repositories import (
 	StudentRepository,
 )
 
-
 def get_student_repository(
 	db: Annotated[Session, Depends(get_db)],
 ) -> StudentRepository:

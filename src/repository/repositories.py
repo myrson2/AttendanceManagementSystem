@@ -11,7 +11,6 @@ from src.models.database import Base
 
 ModelT = TypeVar("ModelT", bound=Base)
 
-
 class BaseRepository(Generic[ModelT]):
     def __init__(self, db: Session, model: type[ModelT]) -> None:
         self.db = db
