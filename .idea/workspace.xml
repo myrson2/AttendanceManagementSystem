@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a2355c10-09c3-4ebd-9111-78f80beca693" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FastAPI main" />
+        <option value="FastAPI test_main" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000015818015018" />
+      <entry key="MS500" value="1.069156084568267" />
+      <entry key="S2" value="1.5128325251471924" />
+      <entry key="S5" value="1.7801180462095385" />
+      <entry key="S10" value="2.082021664784555" />
+      <entry key="S30" value="4.240137459976847" />
+      <entry key="S60" value="6.466284129501736" />
+      <entry key="M2" value="8.373361956240288" />
+      <entry key="M5" value="11.516748970061116" />
+      <entry key="M10" value="19.45501697171503" />
+      <entry key="M15" value="30.075382406135006" />
+      <entry key="M30" value="60.34855066271015" />
+      <entry key="H1" value="95.19707692272569" />
+      <entry key="H2" value="122.52691278006563" />
+      <entry key="H4" value="139.77610600520606" />
+      <entry key="D1" value="156.40093156316405" />
+      <entry key="W1" value="159.4799438572437" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="2.6057901490884146E-136" />
+      <entry key="S5" value="5.839501511380606E-55" />
+      <entry key="S10" value="7.64166346830415E-28" />
+      <entry key="S30" value="9.192324211297294E-10" />
+      <entry key="S60" value="3.337545744375745E-5" />
+      <entry key="M2" value="0.008026546874676544" />
+      <entry key="M5" value="0.2782184698642138" />
+      <entry key="M10" value="1.0271385310893857" />
+      <entry key="M15" value="1.6555824159278472" />
+      <entry key="M30" value="2.783613022784178" />
+      <entry key="H1" value="3.6933497464196607" />
+      <entry key="H2" value="4.2854625836462334" />
+      <entry key="H4" value="4.62563321941092" />
+      <entry key="D1" value="4.935058694572492" />
+      <entry key="W1" value="4.990657906679895" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.2052707536383897E-6" />
+      <entry key="MS500" value="0.1222614605975027" />
+      <entry key="S2" value="0.9917851059855194" />
+      <entry key="S5" value="1.524469450922432" />
+      <entry key="S10" value="1.942359189722411" />
+      <entry key="S30" value="4.1841891103311735" />
+      <entry key="S60" value="6.434377654361644" />
+      <entry key="M2" value="8.363655187829895" />
+      <entry key="M5" value="11.785134212742866" />
+      <entry key="M10" value="20.473363777273793" />
+      <entry key="M15" value="31.7224709807504" />
+      <entry key="M30" value="63.125039112365656" />
+      <entry key="H1" value="98.88549707425074" />
+      <entry key="H2" value="126.80942399552822" />
+      <entry key="H4" value="144.40011721572236" />
+      <entry key="D1" value="161.33569710038762" />
+      <entry key="W1" value="164.47055928964258" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3K4lLQ4BpfSttYJblboavP298YL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.test_main | #1.executor": "Run",
+    "HTTP Request.test_main | #3.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\merss\Documents\AttendanceManagementSystem\src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="test_main | #1" value="STOPPED" />
+              <entry key="test_main | #3" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="FastAPI.AttendanceManagementSystem">
+    <configuration name="test_main | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test_main.http" executionIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="test_main | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test_main.http" executionIdentifier="#3" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="AttendanceManagementSystem" type="Python.FastAPI">
+      <option name="file" value="$PROJECT_DIR$/main.py" />
+      <module name="attendancemanagementsystem" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.test_main | #1" />
+        <item itemvalue="HTTP Request.test_main | #3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-821f704e66d9-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.9437.214" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2355c10-09c3-4ebd-9111-78f80beca693" name="Changes" comment="" />
+      <created>1790824664818</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790824664818</updated>
+      <workItem from="1790824665807" duration="1446000" />
+      <workItem from="1790826171105" duration="4173000" />
+      <workItem from="1790830493866" duration="491000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

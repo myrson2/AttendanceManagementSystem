@@ -1,0 +1,14 @@
+# Test your FastAPI endpoints
+
+###
+
+POST http://127.0.0.1:8010/students
+Content-Type: application/json
+
+{
+	"student_number": "S001",
+	"name": "Alex Rivera",
+	"email": "alex.rivera@example.com"
+}
+
+###

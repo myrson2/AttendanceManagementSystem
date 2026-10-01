@@ -1,0 +1,72 @@
+POST http://127.0.0.1:8010/students
+Content-Type: application/json
+
+{
+	"student_number": "S001",
+	"name": "Alex Rivera",
+	"email": "alex.rivera@example.com"
+}
+
+<> 2026-10-01T130247.409.json
+
+###
+POST http://127.0.0.1:8010/students
+Content-Type: application/json
+
+{
+	"student_number": "S001",
+	"name": "Alex Rivera",
+	"email": "alex.rivera@example.com"
+}
+
+<> 2026-10-01T125840.500.txt
+
+###
+POST http://127.0.0.1:8010/students
+Content-Type: application/json
+
+{
+	"student_number": "S001",
+	"name": "Alex Rivera",
+	"email": "alex.rivera@example.com"
+}
+
+<> 2026-10-01T125646.500.txt
+
+###
+POST http://127.0.0.1:8010/students
+Content-Type: application/json
+
+{
+	"student_number": "S001",
+	"name": "Alex Rivera",
+	"email": "alex.rivera@example.com"
+}
+
+<> 2026-10-01T125617.500.txt
+
+###
+POST http://127.0.0.1:8010/students
+Content-Type: application/json
+
+{
+	"student_number": "S001",
+	"name": "Alex Rivera",
+	"email": "alex.rivera@example.com"
+}
+
+<> 2026-10-01T125604.500.txt
+
+###
+POST http://127.0.0.1:8010/students
+Content-Type: application/json
+
+{
+	"student_number": "S001",
+	"name": "Alex Rivera",
+	"email": "alex.rivera@example.com"
+}
+
+<> 2026-10-01T125505.201.json
+
+###
