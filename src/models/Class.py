@@ -1,9 +1,14 @@
-from datetime import date, time
-from sqlalchemy import Date, String, Time, ForeignKey
-from sqlalchemy.orm import Mapped, mapped_column
+from datetime import time
+
+from sqlalchemy import String, Time
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
+from models.Attendance import Attendance
+from models.Enrollment import Enrollment
 from src.models.database import Base
 
-class Class(Base):
+
+class ClassModel(Base):
     __tablename__ = "classes"
 
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -33,4 +38,6 @@ class Class(Base):
         nullable=False
     )
 
+    enrollments: Mapped[list["Enrollment"]] = relationship(back_populates="class_")
+    attendance_records: Mapped[list["Attendance"]] = relationship(back_populates="class_")
 

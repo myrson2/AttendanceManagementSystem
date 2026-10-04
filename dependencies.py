@@ -9,7 +9,10 @@ from src.repository.repositories import (
 	ClassRepository,
 	StudentRepository,
 )
+from src.service.StudentService import StudentService
 
+
+# Repository dependency injection functions
 def get_student_repository(
 	db: Annotated[Session, Depends(get_db)],
 ) -> StudentRepository:
@@ -26,3 +29,10 @@ def get_attendance_repository(
 	db: Annotated[Session, Depends(get_db)],
 ) -> AttendanceRepository:
 	return AttendanceRepository(db)
+
+
+# Service dependency injection functions
+def get_student_service(
+	repository: Annotated[StudentRepository, Depends(get_student_repository)],
+) -> StudentService:
+	return StudentService(repository)

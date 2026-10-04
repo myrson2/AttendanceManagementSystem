@@ -1,7 +1,12 @@
 from datetime import date, time
-from sqlalchemy import Date, String, Time, ForeignKey
-from sqlalchemy.orm import Mapped, mapped_column
+
+from sqlalchemy import Date, ForeignKey, String, Time
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
+from models.Class import ClassModel
+from models.Student import Student
 from src.models.database import Base
+
 
 class Attendance(Base):
     __tablename__ = "attendance"
@@ -15,6 +20,7 @@ class Attendance(Base):
 
     class_id: Mapped[int] = mapped_column(
         ForeignKey("classes.id"),
+        nullable=False
     )
 
     date: Mapped[date] = mapped_column(
@@ -36,3 +42,6 @@ class Attendance(Base):
         Time,
         nullable=True
     )
+
+    student: Mapped["Student"] = relationship(back_populates="attendance_records")
+    class_: Mapped["ClassModel"] = relationship(back_populates="attendance_records")

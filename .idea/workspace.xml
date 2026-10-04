@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2355c10-09c3-4ebd-9111-78f80beca693" name="Changes" comment="Create Post Http for attendance.db">
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2026-10-01T125505.201.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2026-10-01T125604.500.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2026-10-01T125617.500.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2026-10-01T125646.500.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2026-10-01T125840.500.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2026-10-01T130247.409.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendance.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flow.drawio" afterDir="false" />
+    <list default="true" id="a2355c10-09c3-4ebd-9111-78f80beca693" name="Changes" comment="feat: add class_id foreign key to Attendance model                                                                                                                            &#10;                                                                                                                                                                                  &#10;    - Add `class_id` column to the `Attendance` model referencing `classes.id`                                                                                                    &#10;    - Update ER diagram (`flow.drawio`) to reflect the new database schema                                                                                                        &#10;    - Clean up unused `get_db` import in `AttendanceService`                                                                                                                      &#10;    - Minor formatting adjustments in `repositories.py`">
+      <change afterPath="$PROJECT_DIR$/utility.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Attendance.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Attendance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/StudentController.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/StudentController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/repositories.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/repositories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/AttendanceService.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AttendanceService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schema/Attendance.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema/Attendance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schema/Student.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema/Student.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_main.http" beforeDir="false" afterPath="$PROJECT_DIR$/test_main.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,63 +35,75 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;myrson2&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/myrson2/AttendanceManagementSystem.git&quot;,
+    &quot;accountId&quot;: &quot;9c6820d5-6b3b-4e03-b341-b95a5317d416&quot;
+  }
+}</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
+      <entry key="MS100" value="1.0641049700549356E-5" />
+      <entry key="MS500" value="0.10125043421959086" />
+      <entry key="S2" value="0.5668857007511596" />
+      <entry key="S5" value="0.9427717453879001" />
+      <entry key="S10" value="1.7613497815547632" />
+      <entry key="S30" value="8.784713593837012" />
+      <entry key="S60" value="17.612124695385333" />
+      <entry key="M2" value="26.647313601015025" />
+      <entry key="M5" value="35.989834262418626" />
+      <entry key="M10" value="45.5501994000693" />
+      <entry key="M15" value="57.13763104482856" />
+      <entry key="M30" value="95.41295766117602" />
+      <entry key="H1" value="155.15490189496091" />
+      <entry key="H2" value="216.1467050753151" />
+      <entry key="H4" value="261.57988549997344" />
+      <entry key="D1" value="310.6718816972447" />
+      <entry key="W1" value="320.34755185923535" />
+    </decayedCancelled>
+    <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000067969221" />
-      <entry key="S10" value="1.0001642391659187" />
-      <entry key="S30" value="1.1378739754140474" />
-      <entry key="S60" value="1.7432204741560378" />
-      <entry key="M2" value="2.8817717633534072" />
-      <entry key="M5" value="8.557762439922579" />
-      <entry key="M10" value="21.265682000106832" />
-      <entry key="M15" value="34.053137830715315" />
-      <entry key="M30" value="68.3524677394547" />
-      <entry key="H1" value="110.568941730197" />
-      <entry key="H2" value="146.11820048445892" />
-      <entry key="H4" value="169.5732698363604" />
-      <entry key="D1" value="192.8709255178054" />
-      <entry key="W1" value="197.25702607477763" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.742252427775935E-141" />
-      <entry key="S5" value="5.959954879226668E-57" />
-      <entry key="S10" value="7.720074403285681E-29" />
-      <entry key="S30" value="4.2580147549903964E-10" />
-      <entry key="S60" value="2.0635219633255117E-5" />
-      <entry key="M2" value="0.004565061596320992" />
-      <entry key="M5" value="0.14209766356411427" />
-      <entry key="M10" value="0.6570303776731241" />
-      <entry key="M15" value="1.2432818000795625" />
-      <entry key="M30" value="2.579162651453098" />
-      <entry key="H1" value="3.8716674103011925" />
-      <entry key="H2" value="4.799594111580246" />
-      <entry key="H4" value="5.360577700652643" />
-      <entry key="D1" value="5.887473185038686" />
-      <entry key="W1" value="5.983771678733701" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0000000001848106" />
+      <entry key="M2" value="1.000021182273572" />
+      <entry key="M5" value="1.0255656507566804" />
+      <entry key="M10" value="1.2953537092973997" />
+      <entry key="M15" value="1.7318435542931943" />
+      <entry key="M30" value="3.160827876257924" />
+      <entry key="H1" value="5.18213885648967" />
+      <entry key="H2" value="7.049805808762747" />
+      <entry key="H4" value="8.352835220988752" />
+      <entry key="D1" value="9.69755951353642" />
+      <entry key="W1" value="9.95605078881637" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="8.030137877855822E-8" />
-      <entry key="MS500" value="0.038101721689884474" />
-      <entry key="S2" value="0.44181061910262837" />
-      <entry key="S5" value="0.7212643448186504" />
-      <entry key="S10" value="0.8494261620795407" />
-      <entry key="S30" value="1.0813915840298172" />
-      <entry key="S60" value="1.70668720399946" />
-      <entry key="M2" value="2.8611852949405687" />
-      <entry key="M5" value="8.684388454691717" />
-      <entry key="M10" value="21.910599499503274" />
-      <entry key="M15" value="35.28547506803636" />
-      <entry key="M30" value="70.92274246847909" />
-      <entry key="H1" value="114.43434967151647" />
-      <entry key="H2" value="150.91396713751732" />
-      <entry key="H4" value="174.93171455748856" />
-      <entry key="D1" value="198.7580080064489" />
-      <entry key="W1" value="203.24074100816543" />
+      <entry key="MS100" value="3.938828593575247E-4" />
+      <entry key="MS500" value="0.3035391370366408" />
+      <entry key="S2" value="1.2342463664878491" />
+      <entry key="S5" value="1.7910277671065689" />
+      <entry key="S10" value="2.674440086968542" />
+      <entry key="S30" value="9.711317569515936" />
+      <entry key="S60" value="18.540190973910683" />
+      <entry key="M2" value="27.59093321068179" />
+      <entry key="M5" value="36.98246736209452" />
+      <entry key="M10" value="46.82003865682359" />
+      <entry key="M15" value="58.845261613422096" />
+      <entry key="M30" value="98.55253946353051" />
+      <entry key="H1" value="160.32122125858535" />
+      <entry key="H2" value="223.1864458354431" />
+      <entry key="H4" value="269.92697075199516" />
+      <entry key="D1" value="320.3683625369998" />
+      <entry key="W1" value="330.30344528555713" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -104,28 +115,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "HTTP Request.test_main | #1.executor": "Run",
-    "HTTP Request.test_main | #3.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP Request.test_main | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.test_main | #3.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\merss\Documents\AttendanceManagementSystem" />
@@ -194,7 +205,12 @@
       <workItem from="1790824665807" duration="1446000" />
       <workItem from="1790826171105" duration="4173000" />
       <workItem from="1790830493866" duration="743000" />
-      <workItem from="1790870040651" duration="3689000" />
+      <workItem from="1790870040651" duration="3863000" />
+      <workItem from="1790904585267" duration="2667000" />
+      <workItem from="1790910554235" duration="2058000" />
+      <workItem from="1790922910861" duration="877000" />
+      <workItem from="1790988915818" duration="4000" />
+      <workItem from="1790988936573" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="Create Post Http for attendance.db">
       <option name="closed" value="true" />
@@ -204,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790831208545</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add class_id foreign key to Attendance model                                                                                                                            &#10;                                                                                                                                                                                  &#10;    - Add `class_id` column to the `Attendance` model referencing `classes.id`                                                                                                    &#10;    - Update ER diagram (`flow.drawio`) to reflect the new database schema                                                                                                        &#10;    - Clean up unused `get_db` import in `AttendanceService`                                                                                                                      &#10;    - Minor formatting adjustments in `repositories.py`">
+      <option name="closed" value="true" />
+      <created>1790874053883</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1790874053883</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,16 +236,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create Post Http for attendance.db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Post Http for attendance.db" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/repository/repositories.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="feat: add class_id foreign key to Attendance model                                                                                                                            &#10;                                                                                                                                                                                  &#10;    - Add `class_id` column to the `Attendance` model referencing `classes.id`                                                                                                    &#10;    - Update ER diagram (`flow.drawio`) to reflect the new database schema                                                                                                        &#10;    - Clean up unused `get_db` import in `AttendanceService`                                                                                                                      &#10;    - Minor formatting adjustments in `repositories.py`" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add class_id foreign key to Attendance model                                                                                                                            &#10;                                                                                                                                                                                  &#10;    - Add `class_id` column to the `Attendance` model referencing `classes.id`                                                                                                    &#10;    - Update ER diagram (`flow.drawio`) to reflect the new database schema                                                                                                        &#10;    - Clean up unused `get_db` import in `AttendanceService`                                                                                                                      &#10;    - Minor formatting adjustments in `repositories.py`" />
   </component>
 </project>

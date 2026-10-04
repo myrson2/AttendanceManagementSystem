@@ -3,10 +3,10 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.exc import IntegrityError
 
-from dependencies import get_student_repository
+from dependencies import get_student_service
 from src.models.Student import Student
-from src.repository.repositories import StudentRepository
 from src.schema.Student import StudentCreateSchema, StudentSchema
+from src.service.StudentService import StudentService
 
 router = APIRouter()
 
@@ -17,11 +17,10 @@ router = APIRouter()
 )
 def create_student(
     student_data: StudentCreateSchema,
-    repository: Annotated[StudentRepository, Depends(get_student_repository)],
+    service: Annotated[StudentService, Depends(get_student_service)],
 ) -> Student:
-    student = Student(**student_data.model_dump())
     try:
-        return repository.create(student)
+        return service.create_student(student_data)
     except IntegrityError as error:
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,

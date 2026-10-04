@@ -1,8 +1,12 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from datetime import date, time
+from utility import generate_id
+
+def generate_attendance_id() -> str:
+    return f"ATD-{generate_id()}"
 
 class AttendanceSchema(BaseModel):
-    id: int
+    attendance_id: str = Field(default_factory=generate_id)
     student_id: int
     date: date
     status: str

@@ -1,17 +1,17 @@
-from typing import Generic, TypeVar
+from typing import TypeVar
 
 from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from src.models.Attendance import Attendance
-from src.models.Class import Class
-from src.models.Student import Student
+from src.models.Class import ClassModel
 from src.models.database import Base
+from src.models.Student import Student
 
 ModelT = TypeVar("ModelT", bound=Base)
 
-class BaseRepository(Generic[ModelT]):
+class BaseRepository[ModelT: Base]:
     def __init__(self, db: Session, model: type[ModelT]) -> None:
         self.db = db
         self.model = model
@@ -41,16 +41,30 @@ class BaseRepository(Generic[ModelT]):
         self.db.commit()
         return True
 
-
 class StudentRepository(BaseRepository[Student]):
     def __init__(self, db: Session) -> None:
         super().__init__(db, Student)
 
+    def update(self, student_id: int, updated_student: Student) -> Student | None:
+        existing_student = self.get(student_id)
+        if existing_student is None:
+            return None
 
-class ClassRepository(BaseRepository[Class]):
+        for attr, value in vars(updated_student).items():
+            if attr != "id" and value is not None:
+                setattr(existing_student, attr, value)
+
+        try:
+            self.db.commit()
+        except IntegrityError:
+            self.db.rollback()
+            raise
+        self.db.refresh(existing_student)
+        return existing_student
+
+class ClassRepository(BaseRepository[ClassModel]):
     def __init__(self, db: Session) -> None:
-        super().__init__(db, Class)
-
+        super().__init__(db, ClassModel)
 
 class AttendanceRepository(BaseRepository[Attendance]):
     def __init__(self, db: Session) -> None:

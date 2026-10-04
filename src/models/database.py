@@ -19,10 +19,6 @@ class Base(DeclarativeBase):
     pass
 
 def create_tables() -> None:
-    from src.models.Attendance import Attendance
-    from src.models.Class import Class
-    from src.models.Student import Student
-
     Base.metadata.create_all(bind=engine)
 
 
