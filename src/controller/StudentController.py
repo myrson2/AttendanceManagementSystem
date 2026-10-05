@@ -4,21 +4,20 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.exc import IntegrityError
 
 from dependencies import get_student_service
-from src.models.Student import Student
-from src.schema.Student import StudentCreateSchema, StudentSchema
+from src.schema.Student import StudentCreateSchema, StudentResponse
 from src.service.StudentService import StudentService
 
 router = APIRouter()
 
 @router.post(
     "/students",
-    response_model=StudentSchema,
+    response_model=StudentResponse,
     status_code=status.HTTP_201_CREATED,
 )
 def create_student(
     student_data: StudentCreateSchema,
     service: Annotated[StudentService, Depends(get_student_service)],
-) -> Student:
+) -> StudentResponse:
     try:
         return service.create_student(student_data)
     except IntegrityError as error:

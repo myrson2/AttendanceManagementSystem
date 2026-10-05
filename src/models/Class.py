@@ -1,11 +1,14 @@
 from datetime import time
+from typing import TYPE_CHECKING
 
 from sqlalchemy import String, Time
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from models.Attendance import Attendance
-from models.Enrollment import Enrollment
 from src.models.database import Base
+
+if TYPE_CHECKING:
+    from src.models.Attendance import Attendance
+    from src.models.Enrollment import Enrollment
 
 
 class ClassModel(Base):
@@ -38,6 +41,11 @@ class ClassModel(Base):
         nullable=False
     )
 
-    enrollments: Mapped[list["Enrollment"]] = relationship(back_populates="class_")
-    attendance_records: Mapped[list["Attendance"]] = relationship(back_populates="class_")
-
+    enrollments: Mapped[list["Enrollment"]] = relationship(
+        "Enrollment",
+        back_populates="classes"
+    )
+    attendance_records: Mapped[list["Attendance"]] = relationship(
+        "Attendance",
+        back_populates="classes"
+    )

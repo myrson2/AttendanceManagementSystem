@@ -10,5 +10,7 @@ class StudentCreateSchema(StudentSchema):
     pass
 
 class StudentResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
     student_number: str
     name: str

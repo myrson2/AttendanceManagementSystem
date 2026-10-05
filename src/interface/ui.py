@@ -1,6 +1,6 @@
 
 from src.schema.Student import StudentCreateSchema
-
+import httpx
 
 def created_student(): 
     student_data = {
@@ -12,9 +12,15 @@ def created_student():
     
 
 def student_flow():
-    # Create a user input for the student schema
     student = created_student()
-    print(f"Student created: {student.model_dump()}")
+
+    response = httpx.post(
+        "http://127.0.0.1:8010/students",
+        json=student.model_dump(),
+        timeout=10.0,
+    )
+    response.raise_for_status()
+    print(f"Student created: {response.json()}")
 
 
 def main():

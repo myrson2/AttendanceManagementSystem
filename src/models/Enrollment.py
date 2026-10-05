@@ -1,9 +1,13 @@
+from typing import TYPE_CHECKING
+
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from models.Class import ClassModel
-from models.Student import Student
 from src.models.database import Base
+
+if TYPE_CHECKING:
+    from src.models.Class import ClassModel
+    from src.models.Student import Student
 
 
 class Enrollment(Base):
@@ -15,5 +19,11 @@ class Enrollment(Base):
 
     class_id: Mapped[int] = mapped_column(ForeignKey("classes.id"), nullable=False)
 
-    student: Mapped["Student"] = relationship(back_populates="enrollments")
-    class_: Mapped["ClassModel"] = relationship(back_populates="enrollments")
+    student: Mapped["Student"] = relationship(
+        "Student",
+        back_populates="enrollments"
+    )
+    classes: Mapped["ClassModel"] = relationship(
+        "ClassModel",
+        back_populates="enrollments"
+    )

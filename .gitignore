@@ -5,3 +5,9 @@ __pycache__/
 .env
 .venv
 attendance.db
+
+/uv.lock
+
+/pyproject.toml
+
+test_main.http

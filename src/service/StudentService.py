@@ -9,4 +9,5 @@ class StudentService:
 
     def create_student(self, student_data: StudentCreateSchema) -> StudentResponse:
         student = Student(**student_data.model_dump())
-        return self.repository.create(student)
+        saved_student = self.repository.create(student)
+        return StudentResponse.model_validate(saved_student)
