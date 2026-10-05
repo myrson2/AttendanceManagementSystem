@@ -19,6 +19,7 @@ def student_flow():
         json=student.model_dump(),
         timeout=10.0,
     )
+
     response.raise_for_status()
     print(f"Student created: {response.json()}")
 

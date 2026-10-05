@@ -4,10 +4,10 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from src.models.Attendance import Attendance
+from src.models.Attendance import AttendanceModel
 from src.models.Class import ClassModel
 from src.models.database import Base
-from src.models.Student import Student
+from src.models.Student import StudentModel
 
 ModelT = TypeVar("ModelT", bound=Base)
 
@@ -41,11 +41,15 @@ class BaseRepository[ModelT: Base]:
         self.db.commit()
         return True
 
-class StudentRepository(BaseRepository[Student]):
+class StudentRepository(BaseRepository[StudentModel]):
     def __init__(self, db: Session) -> None:
-        super().__init__(db, Student)
+        super().__init__(db, StudentModel)
 
-    def update(self, student_id: int, updated_student: Student) -> Student | None:
+    def update(
+        self,
+        student_id: int,
+        updated_student: StudentModel,
+    ) -> StudentModel | None:
         existing_student = self.get(student_id)
         if existing_student is None:
             return None
@@ -66,6 +70,6 @@ class ClassRepository(BaseRepository[ClassModel]):
     def __init__(self, db: Session) -> None:
         super().__init__(db, ClassModel)
 
-class AttendanceRepository(BaseRepository[Attendance]):
+class AttendanceRepository(BaseRepository[AttendanceModel]):
     def __init__(self, db: Session) -> None:
-        super().__init__(db, Attendance)
+        super().__init__(db, AttendanceModel)

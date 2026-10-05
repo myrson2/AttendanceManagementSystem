@@ -8,10 +8,10 @@ from src.models.database import Base
 
 if TYPE_CHECKING:
     from src.models.Class import ClassModel
-    from src.models.Student import Student
+    from src.models.Student import StudentModel
 
 
-class Attendance(Base):
+class AttendanceModel(Base):
     __tablename__ = "attendance"
 
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -46,8 +46,8 @@ class Attendance(Base):
         nullable=True
     )
 
-    student: Mapped["Student"] = relationship(
-        "Student",
+    student: Mapped["StudentModel"] = relationship(
+        "StudentModel",
         back_populates="attendance_records"
     )
     classes: Mapped["ClassModel"] = relationship(

@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2355c10-09c3-4ebd-9111-78f80beca693" name="Changes" comment="feat: add class_id foreign key to Attendance model                                                                                                                            &#10;                                                                                                                                                                                  &#10;    - Add `class_id` column to the `Attendance` model referencing `classes.id`                                                                                                    &#10;    - Update ER diagram (`flow.drawio`) to reflect the new database schema                                                                                                        &#10;    - Clean up unused `get_db` import in `AttendanceService`                                                                                                                      &#10;    - Minor formatting adjustments in `repositories.py`">
-      <change afterPath="$PROJECT_DIR$/utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/StudentController.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/StudentController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Attendance.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Attendance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/repositories.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/repositories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schema/Attendance.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema/Attendance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schema/Student.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema/Student.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Enrollment.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Enrollment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Student.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Student.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_main.http" beforeDir="false" afterPath="$PROJECT_DIR$/test_main.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

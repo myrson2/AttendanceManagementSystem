@@ -1,6 +1,6 @@
-from src.models.Attendance import Attendance
+from src.models.Attendance import AttendanceModel
 from src.models.Class import ClassModel
-from src.models.Enrollment import Enrollment
-from src.models.Student import Student
+from src.models.Enrollment import EnrollmentModel
+from src.models.Student import StudentModel
 
-__all__ = ["Attendance", "ClassModel", "Enrollment", "Student"]
+__all__ = ["AttendanceModel", "ClassModel", "EnrollmentModel", "StudentModel"]

@@ -6,11 +6,11 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from src.models.database import Base
 
 if TYPE_CHECKING:
-    from src.models.Attendance import Attendance
-    from src.models.Enrollment import Enrollment
+    from src.models.Attendance import AttendanceModel
+    from src.models.Enrollment import EnrollmentModel
 
 
-class Student(Base):
+class StudentModel(Base):
     __tablename__ = "students"
 
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -32,11 +32,11 @@ class Student(Base):
         unique=True
     )
 
-    enrollments: Mapped[list["Enrollment"]] = relationship(
-        "Enrollment",
+    enrollments: Mapped[list["EnrollmentModel"]] = relationship(
+        "EnrollmentModel",
         back_populates="student"
     )
-    attendance_records: Mapped[list["Attendance"]] = relationship(
-        "Attendance",
+    attendance_records: Mapped[list["AttendanceModel"]] = relationship(
+        "AttendanceModel",
         back_populates="student"
     )

@@ -1,4 +1,6 @@
 # Test your FastAPI endpoints
+# Set JWT_SECRET_KEY in .env to a random secret of at least 32 characters.
+# POST /students returns access_token; use it as a Bearer token for GET /students/me.
 
 ###
 
@@ -6,10 +8,9 @@ POST http://127.0.0.1:8010/students
 Content-Type: application/json
 
 {
-	"student_number": "S002",
-	"name": "Myrson Beros",
-	"email": "myrson.beros@example.com"
+	"student_number": "S003",
+	"name": "Jewel Beros",
+	"email": "jewel@example.com"
 }
 
-PATCH http://127.0.0.1:8010/students/1
 ###
